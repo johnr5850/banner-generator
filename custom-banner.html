@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-        $(function(){
-          
-        })
-        
-        
-    </script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      $("#switcheroo").click(function() {
+        $('h1').val();
+      });
+    })
+  </script>
+</head>
+
+<body>
+  <h1>Name: <input id="nameroo"></h1>
+  <h3>Period: <input id='pdnum'></h3>
+  <h3>Best at: <input id='bestat'></h3>
+  <button id="switcheroo">MAXIMUM OVERDRIVE</button>
   
-  </body>
+</body>
+
 </html>
