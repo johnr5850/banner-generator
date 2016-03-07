@@ -8,18 +8,32 @@
   <script>
     $(function() {
       $("#switcheroo").click(function() {
-        $('h1').val();
+        var banner
       });
     })
   </script>
+  <style>
+    #prompteroo {
+      background-color: black;
+      color: white;
+      width: 400px;
+    }
+    #resulteroo {
+      width: 600px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Name: <input id="nameroo"></h1>
-  <h3>Period: <input id='pdnum'></h3>
-  <h3>Best at: <input id='bestat'></h3>
-  <button id="switcheroo">MAXIMUM OVERDRIVE</button>
-  
+  <div id="prompteroo">
+    <h1>Name: <input id="nameroo"></h1>
+    <h3>Period: <input id='pdnum'></h3>
+    <h3>Best at: <input id='bestat'></h3>
+    <button id="switcheroo">MAXIMUM OVERDRIVE</button>
+  </div>
+  <div id='resulteroo'>
+    <p></p>
+  </div>
 </body>
 
 </html>
