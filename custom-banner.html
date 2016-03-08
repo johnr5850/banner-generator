@@ -8,9 +8,17 @@
   <script>
     $(function() {
       $("#switcheroo").click(function() {
-        var banner
+        var nameroo = $('#nameroo').val();
+        var pdnum = $('#pdnum').val();
+        var bestat = $('#bestat').val();
+        var txtclr = $('#txtclr').val();
+        $('#prompteroo').fadeOut(2000);
+        $('#name1').html(nameroo).css('color',txtclr);
+        $('#pdnum1').html(pdnum).css('color',txtclr);
+        $('#bestat1').html(bestat).css('color',txtclr);
+        $('#resulteroo').fadeIn(2000);
       });
-    })
+    });
   </script>
   <style>
     #prompteroo {
@@ -18,8 +26,10 @@
       color: white;
       width: 400px;
     }
+    
     #resulteroo {
       width: 600px;
+      display: block;
     }
   </style>
 </head>
@@ -29,10 +39,13 @@
     <h1>Name: <input id="nameroo"></h1>
     <h3>Period: <input id='pdnum'></h3>
     <h3>Best at: <input id='bestat'></h3>
+    <h3>Text Color: <input id='txtclr'></h3>
     <button id="switcheroo">MAXIMUM OVERDRIVE</button>
   </div>
   <div id='resulteroo'>
-    <p></p>
+    <h1 id='name1'></h1>
+    <h2 id='pdnum1'></h2>
+    <h3 id='bestat1'></h3>
   </div>
 </body>
 
