@@ -6,16 +6,20 @@
   <title>jQuery Template</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
+  var titlesArray = ['Arguably the Best Coder', 'GET IN THE CHOPPA', '2 + 2 is Fish not 4'];
+  var titleAcq = titlesArray[Math.floor(Math.random()*titlesArray.length)]
     $(function() {
+      $('#resulteroo').fadeOut(50);
       $("#switcheroo").click(function() {
         var nameroo = $('#nameroo').val();
         var pdnum = $('#pdnum').val();
         var bestat = $('#bestat').val();
         var txtclr = $('#txtclr').val();
         $('#prompteroo').fadeOut(2000);
-        $('#name1').html(nameroo).css('color',txtclr);
-        $('#pdnum1').html(pdnum).css('color',txtclr);
-        $('#bestat1').html(bestat).css('color',txtclr);
+        $('#name1').html(nameroo).css('color', txtclr);
+        $('#pdnum1').html(pdnum).css('color', txtclr);
+        $('#bestat1').html(bestat).css('color', txtclr);
+        $('#titleeroo').html(titleAcq).css('color', txtclr);
         $('#resulteroo').fadeIn(2000);
       });
     });
@@ -46,6 +50,7 @@
     <h1 id='name1'></h1>
     <h2 id='pdnum1'></h2>
     <h3 id='bestat1'></h3>
+    <h3 id='titleeroo'></h3>
   </div>
 </body>
 
