@@ -6,8 +6,8 @@
   <title>jQuery Template</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
-  var titlesArray = ['Arguably the Best Coder', 'GET IN THE CHOPPA', '2 + 2 is Fish not 4'];
-  var titleAcq = titlesArray[Math.floor(Math.random()*titlesArray.length)]
+    var titlesArray = ['Arguably the Best Coder', 'GET IN THE CHOPPA', '2 + 2 is Fish Not 4'];
+    var titleAcq = titlesArray[Math.floor(Math.random() * titlesArray.length)]
     $(function() {
       $('#resulteroo').fadeOut(50);
       $("#switcheroo").click(function() {
@@ -20,7 +20,7 @@
         $('#pdnum1').html(pdnum).css('color', txtclr);
         $('#bestat1').html(bestat).css('color', txtclr);
         $('#titleeroo').html(titleAcq).css('color', txtclr);
-        $('#resulteroo').fadeIn(2000);
+        $('#resulteroo').fadeIn(5000);
       });
     });
   </script>
@@ -32,8 +32,13 @@
     }
     
     #resulteroo {
-      width: 600px;
       display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top:4cm;
+      background-image:url('');
+      width: 1000px;
+      height:1000px;
     }
   </style>
 </head>
