@@ -6,7 +6,7 @@
   <title>jQuery Template</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
-    var titlesArray = ['Arguably the Best Coder', 'GET IN THE CHOPPA', '2 + 2 is Fish Not 4'];
+    var titlesArray = ['Title: Arguably the Best Coder', 'Title: GET IN THE CHOPPA', 'Title: 2 + 2 is Fish Not 4'];
     var titleAcq = titlesArray[Math.floor(Math.random() * titlesArray.length)]
     $(function() {
       $('#resulteroo').fadeOut(50);
@@ -14,7 +14,10 @@
         var nameroo = $('#nameroo').val();
         var pdnum = $('#pdnum').val();
         var bestat = $('#bestat').val();
-        var txtclr = $('#txtclr').val();
+        var txtclr = $('#txtclr').val().toLowerCase();
+        if (txtclr == 'white') {
+          txtclr = 'black';
+        }
         $('#prompteroo').fadeOut(2000);
         $('#name1').html(nameroo).css('color', txtclr);
         $('#pdnum1').html(pdnum).css('color', txtclr);
@@ -22,10 +25,12 @@
         $('#titleeroo').html(titleAcq).css('color', txtclr);
         $('#resulteroo').fadeIn(5000);
       });
+
     });
   </script>
   <style>
     #prompteroo {
+      display: block;
       background-color: black;
       color: white;
       width: 400px;
@@ -35,27 +40,33 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      padding-top:4cm;
-      background-image:url('');
+      margin: 0 auto;
+      padding-top: 4cm;
       width: 1000px;
-      height:1000px;
+      height: 1000px;
+    }
+    
+    .textAnswer {
+      font-size: 40px;
+      font-family: Serif;
     }
   </style>
 </head>
 
 <body>
+
+  <div id='resulteroo'>
+    <h2 id='titleeroo' class='textAnswer'></h2>
+    <h1 id='name1' class='textAnswer'></h1>
+    <h2 id='pdnum1' class='textAnswer'></h2>
+    <h2 id='bestat1' class='textAnswer'></h2>
+  </div>
   <div id="prompteroo">
     <h1>Name: <input id="nameroo"></h1>
     <h3>Period: <input id='pdnum'></h3>
     <h3>Best at: <input id='bestat'></h3>
     <h3>Text Color: <input id='txtclr'></h3>
     <button id="switcheroo">MAXIMUM OVERDRIVE</button>
-  </div>
-  <div id='resulteroo'>
-    <h1 id='name1'></h1>
-    <h2 id='pdnum1'></h2>
-    <h3 id='bestat1'></h3>
-    <h3 id='titleeroo'></h3>
   </div>
 </body>
 
