@@ -15,11 +15,11 @@
         var pdnum = $('#pdnum').val();
         var bestat = $('#bestat').val();
         var txtclr = $('#txtclr').val().toLowerCase();
-        if (txtclr == 'white') { /*No white text color allowed(since background is white */
+        if (txtclr == 'white') { /*No white text color allowed(since background is white) */
           txtclr = 'black';
         }
-        $('#prompteroo').fadeOut(2000);
-        $('#name1').html(nameroo).css('color', txtclr);
+        $('#prompteroo').fadeOut(2000); /*Questions box will start to fade out*/
+        $('#name1').html(nameroo).css('color', txtclr); /*Replaces the content inside  */
         $('#pdnum1').html(pdnum).css('color', txtclr);
         $('#bestat1').html(bestat).css('color', txtclr);
         $('#titleeroo').html(titleAcq).css('color', txtclr);
