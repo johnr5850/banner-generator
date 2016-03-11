@@ -15,7 +15,7 @@
         var pdnum = $('#pdnum').val();
         var bestat = $('#bestat').val();
         var txtclr = $('#txtclr').val().toLowerCase();
-        if (txtclr == 'white') {
+        if (txtclr == 'white') { /*No white text color allowed(since background is white */
           txtclr = 'black';
         }
         $('#prompteroo').fadeOut(2000);
