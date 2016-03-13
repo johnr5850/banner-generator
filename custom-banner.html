@@ -7,23 +7,23 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     var titlesArray = ['Title: Arguably the Best Coder', 'Title: GET IN THE CHOPPA', 'Title: 2 + 2 is Fish Not 4'];
-    var titleAcq = titlesArray[Math.floor(Math.random() * titlesArray.length)]
-    $(function() {
+    var titleAcq = titlesArray[Math.floor(Math.random() * titlesArray.length)]   /*Selects a random string from the array above it */
+    $(function() {   
       $('#resulteroo').fadeOut(50);
       $("#switcheroo").click(function() {
         var nameroo = $('#nameroo').val();
         var pdnum = $('#pdnum').val();
         var bestat = $('#bestat').val();
         var txtclr = $('#txtclr').val().toLowerCase();
-        if (txtclr == 'white') { /*No white text color allowed(since background is white) */
+        if (txtclr == 'white') { /*No white text color allowed(since background is white), will change the text color to black instead */
           txtclr = 'black';
         }
         $('#prompteroo').fadeOut(2000); /*Questions box will start to fade out*/
-        $('#name1').html(nameroo).css('color', txtclr); /*Replaces the content inside  */
-        $('#pdnum1').html(pdnum).css('color', txtclr);
-        $('#bestat1').html(bestat).css('color', txtclr);
-        $('#titleeroo').html(titleAcq).css('color', txtclr);
-        $('#resulteroo').fadeIn(5000);
+        $('#name1').html(nameroo).css('color', txtclr); /*Replaces the content inside the empty name tag */
+        $('#pdnum1').html(pdnum).css('color', txtclr);/*Replaces the content inside the empty period tag */
+        $('#bestat1').html(bestat).css('color', txtclr);/*Replaces the content inside the empty 'best at' tag */
+        $('#titleeroo').html(titleAcq).css('color', txtclr);/*Replaces the content inside the empty title tag */
+        $('#resulteroo').fadeIn(5000);/*Result will begin to fade in*/
       });
 
     });
